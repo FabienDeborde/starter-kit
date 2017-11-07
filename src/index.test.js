@@ -11,10 +11,10 @@ describe('Our first test', () => {
 
 
 describe('index.html', () => {
-  it('should say hello', () => {
+  it('should have h1 that says Users', () => {
     const index = fs.readFileSync('./src/index.html', 'utf-8');
     const dom = new JSDOM(index);
     const h1 = dom.window.document.querySelector("h1").textContent;
-    expect(h1).to.equal('Hello');
+    expect(h1).to.equal('Users');
   })
 })
